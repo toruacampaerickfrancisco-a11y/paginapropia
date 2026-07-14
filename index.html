@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Agencia experta en Mantenimiento de Equipos, Desarrollo de Software (ERP, CRM), Páginas Web y Apps Móviles. Soluciones IT integrales.">
+    <meta name="description"
+        content="Agencia experta en Mantenimiento de Equipos, Desarrollo de Software (ERP, CRM), Páginas Web y Apps Móviles. Soluciones IT integrales.">
     <title>TechHmo | Mantenimiento IT & Desarrollo de Software</title>
-    
+
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <div class="glowing-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+            </div>
+            <div class="loading-text">
+                <span class="logo-text" style="font-size: 1.2rem;">TECHHMO</span>
+                <div class="loading-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Background Decorators -->
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
@@ -25,14 +44,15 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="./assets/logo.png" alt="TechHmo Logo" style="height: 40px; border-radius: 8px;">
                 <span class="logo-text">TECHHMO</span>
             </a>
             <div class="nav-links">
-                <a href="#servicios">Servicios</a>
-                <a href="#experiencia">Experiencia</a>
-                <a href="#contacto" class="btn-primary-outline">Contactar</a>
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="experiencia.html">Experiencia</a>
+                <a href="contacto.html" class="btn-primary-outline">Contactar</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Abrir menú">
                 <i class="ph ph-list"></i>
@@ -42,125 +62,104 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container hero-content">
-            <div class="hero-title-wrapper reveal">
-                <img src="./assets/logo.png" alt="TechHmo Logo" class="hero-main-logo">
-                <h1>
-                    Impulsamos tu Negocio con <br>
-                    <span class="text-gradient">Tecnología de Vanguardia</span>
-                </h1>
+        <div class="container hero-grid">
+            <div class="hero-text-content reveal">
+                <div class="hero-title-wrapper">
+                    <img src="./assets/logo.png" alt="TechHmo Logo" class="hero-main-logo">
+                    <h1>
+                        Impulsamos tu Negocio con <br>
+                        <span class="text-gradient">Tecnología de Vanguardia</span>
+                    </h1>
+                </div>
+                <p class="subtitle">
+                    Desde mantenimiento preventivo de equipos hasta el desarrollo de ecosistemas completos de software (ERP, CRM) y Apps Móviles.
+                </p>
+                <div class="hero-actions">
+                    <a href="servicios.html" class="btn-primary">Descubrir Soluciones</a>
+                    <div class="hero-socials">
+                        <a href="https://wa.me/526622028681" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100091979785658" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="https://www.instagram.com/tech.hmo" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
             </div>
-            <p class="subtitle reveal">
-                Desde mantenimiento preventivo de equipos hasta el desarrollo de ecosistemas completos de software (ERP, CRM) y Apps Móviles.
-            </p>
-            <div class="hero-actions reveal">
-                <a href="#servicios" class="btn-primary">Descubrir Soluciones</a>
-                <div class="hero-socials">
-                    <a href="https://wa.me/526622028681" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100091979785658" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
-                    <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+
+            <div class="hero-visuals reveal">
+                <!-- Code Editor Animation -->
+                <div class="code-window glass-card">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="window-body">
+                        <pre><code id="typewriter"></code><span class="cursor"></span></pre>
+                    </div>
+                </div>
+
+                <!-- Smartphone Mockup -->
+                <div class="smartphone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="mini-app">
+                            <div class="app-header">
+                                <div class="user-info">
+                                    <div class="avatar"></div>
+                                    <span>Panel Admin</span>
+                                </div>
+                                <i class="ph-fill ph-bell icon-pulse"></i>
+                            </div>
+                            
+                            <div class="app-card">
+                                <p>Monitoreo de Red</p>
+                                <h2>100%</h2>
+                                <div class="card-chart">
+                                    <div class="bar bar-1"></div>
+                                    <div class="bar bar-2"></div>
+                                    <div class="bar bar-3"></div>
+                                    <div class="bar bar-4"></div>
+                                    <div class="bar bar-5"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="app-list">
+                                <div class="app-item">
+                                    <div class="item-icon blue"><i class="ph-bold ph-server"></i></div>
+                                    <div class="item-text">
+                                        <h4>Servidor DB</h4>
+                                        <p>Conectado</p>
+                                    </div>
+                                    <div class="item-status green"></div>
+                                </div>
+                                <div class="app-item delay-1">
+                                    <div class="item-icon purple"><i class="ph-bold ph-globe"></i></div>
+                                    <div class="item-text">
+                                        <h4>Web App</h4>
+                                        <p>99.9% Uptime</p>
+                                    </div>
+                                    <div class="item-status green"></div>
+                                </div>
+                                <div class="app-item delay-2">
+                                    <div class="item-icon orange"><i class="ph-bold ph-shield-check"></i></div>
+                                    <div class="item-text">
+                                        <h4>Firewall</h4>
+                                        <p>Analizando...</p>
+                                    </div>
+                                    <div class="item-status yellow pulsing"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="app-nav">
+                                <i class="ph-fill ph-house active"></i>
+                                <i class="ph-fill ph-chart-line-up"></i>
+                                <i class="ph-fill ph-gear"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Services Section -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Nuestros <span class="text-gradient">Servicios</span></h2>
-                <p>Soluciones integrales de TI diseñadas para escalar y optimizar tu empresa.</p>
-            </div>
-            
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card glass-card reveal">
-                    <div class="icon-wrapper">
-                        <i class="ph-duotone ph-desktop"></i>
-                    </div>
-                    <h3>Mantenimiento de Equipos</h3>
-                    <p>Soporte técnico especializado, mantenimiento preventivo y correctivo para mantener tu infraestructura IT siempre operativa y segura.</p>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card glass-card reveal">
-                    <div class="icon-wrapper">
-                        <i class="ph-duotone ph-database"></i>
-                    </div>
-                    <h3>Desarrollo de Software</h3>
-                    <p>Creamos sistemas a la medida (ERP, CRM) para automatizar tus procesos, gestionar clientes y administrar recursos de forma inteligente.</p>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card glass-card reveal">
-                    <div class="icon-wrapper">
-                        <i class="ph-duotone ph-globe"></i>
-                    </div>
-                    <h3>Páginas Web</h3>
-                    <p>Diseño web profesional enfocado en publicidad, landing pages de alta conversión y presencia corporativa que atrae clientes.</p>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card glass-card reveal">
-                    <div class="icon-wrapper">
-                        <i class="ph-duotone ph-device-mobile"></i>
-                    </div>
-                    <h3>Aplicaciones Móviles</h3>
-                    <p>Desarrollo nativo e híbrido en Android Studio e iOS. Llevamos tus ideas al bolsillo de tus clientes con interfaces modernas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack / Experience Section -->
-    <section id="experiencia" class="experience">
-        <div class="container">
-            <div class="experience-content">
-                <div class="experience-text reveal">
-                    <h2>Expertos en el <span class="text-gradient">Desarrollo Moderno</span></h2>
-                    <p>A lo largo de nuestra trayectoria hemos dominado las tecnologías más demandadas del mercado. Construimos software escalable, robusto y con interfaces de usuario que enamoran.</p>
-                    <ul class="feature-list">
-                        <li><i class="ph-bold ph-check-circle"></i> Arquitecturas escalables</li>
-                        <li><i class="ph-bold ph-check-circle"></i> Seguridad de datos</li>
-                        <li><i class="ph-bold ph-check-circle"></i> Integraciones API fluidas</li>
-                    </ul>
-                </div>
-                
-                <div class="tech-grid reveal">
-                    <div class="tech-item glass-card"><i class="ph ph-android-logo"></i> Android Studio</div>
-                    <div class="tech-item glass-card"><i class="ph ph-apple-logo"></i> iOS Dev</div>
-                    <div class="tech-item glass-card"><i class="ph ph-brackets-angle"></i> Frontend</div>
-                    <div class="tech-item glass-card"><i class="ph ph-database-stroke"></i> Backend</div>
-                    <div class="tech-item glass-card"><i class="ph ph-chart-line-up"></i> ERP/CRM</div>
-                    <div class="tech-item glass-card"><i class="ph ph-paint-brush"></i> UI/UX</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action / Contact -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <div class="contact-card glass-card reveal">
-                <div class="contact-info">
-                    <h2>¿Listo para digitalizar tu negocio?</h2>
-                    <p>Contáctanos hoy mismo para una consultoría gratuita. Nos adaptamos a las necesidades de tu empresa.</p>
-                    <div class="hero-socials">
-                        <a href="https://wa.me/526622028681" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100091979785658" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
-                        <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
-                        <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Tu Nombre" required>
-                    <input type="email" placeholder="Correo Electrónico" required>
-                    <textarea placeholder="Cuéntanos sobre tu proyecto o necesidad..." rows="4" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
@@ -176,4 +175,5 @@
     <!-- Scripts -->
     <script src="./js/app.js"></script>
 </body>
+
 </html>

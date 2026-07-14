@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Preloader Logic
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        // Wait 1.2s for the animation to finish then slide it up
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+        }, 1200);
+    }
+
     // 1. Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     
@@ -65,3 +74,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+    // 6. Typewriter Effect for Hero Code Window
+    const typeWriterElement = document.getElementById("typewriter");
+    if (typeWriterElement) {
+        const codeLines = [
+            "<span class=\"keyword\">const</span> <span class=\"function\">TechHmo</span> = {",
+            "  servicios: [<span class=\"string\">\"Mantenimiento\"</span>, <span class=\"string\">\"Software\"</span>, <span class=\"string\">\"Apps\"</span>],",
+            "  experiencia: <span class=\"string\">\"Senior\"</span>,",
+            "  calidad: <span class=\"string\">\"Premium\"</span>,",
+            "  <span class=\"function\">iniciarProyecto</span>: <span class=\"keyword\">function</span>() {",
+            "    <span class=\"keyword\">return</span> <span class=\"string\">\"Éxito garantizado ??\"</span>;",
+            "  }",
+            "};",
+            "",
+            "<span class=\"function\">TechHmo</span>.<span class=\"function\">iniciarProyecto</span>();"
+        ];
+
+        let lineIndex = 0;
+        let charIndex = 0;
+        let currentLine = "";
+        let isTag = false;
+
+        function type() {
+            if (lineIndex < codeLines.length) {
+                let fullLine = codeLines[lineIndex];
+                
+                if (charIndex < fullLine.length) {
+                    let char = fullLine.charAt(charIndex);
+                    
+                    if (char === "<") isTag = true;
+                    if (char === ">") isTag = false;
+
+                    currentLine += char;
+                    charIndex++;
+
+                    if (isTag) {
+                        type(); // skip delay for HTML tags
+                    } else {
+                        // Render previous lines plus current line
+                        typeWriterElement.innerHTML = Array.from({length: lineIndex}, (_, i) => codeLines[i]).join("<br>") + (lineIndex > 0 ? "<br>" : "") + currentLine;
+                        setTimeout(type, Math.random() * 40 + 20); // random typing speed
+                    }
+                } else {
+                    lineIndex++;
+                    charIndex = 0;
+                    currentLine = "";
+                    setTimeout(type, 300); // pause between lines
+                }
+            } else {
+                // Loop the animation after a long pause
+                setTimeout(() => {
+                    typeWriterElement.innerHTML = "";
+                    lineIndex = 0;
+                    charIndex = 0;
+                    currentLine = "";
+                    type();
+                }, 6000);
+            }
+        }
+        
+        // Start typing after preloader (1.2s + small buffer)
+        setTimeout(type, 1500);
+    }
+

@@ -1,0 +1,7 @@
+*.key
+*.pem
+.DS_Store
+node_modules/
+dist/
+.gemini/
+.agents/
